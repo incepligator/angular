@@ -49,6 +49,38 @@
             
             <button ng-click="sampleSubmit()">Submit</button>
             
+            <table class="table table=hover">
+            <tr>
+                <th>First Name</th>
+                <th>LAst Name</th>
+                <th>phone</th>
+                
+                </tr>
+                
+                <tr ng-repeat="person in personArray track by $index">
+                    <td>{{person.firstName}}</td>
+                    <td>{{person.lastName}}</td>
+                    <td>{{person.phone}}</td>
+                </tr>
+            
+            </table>
+            
+            
+            
+            <br>
+            <h1>ng-repeat sample</h1>
+            
+            
+            <input type="text" ng-model="animal">
+            <button ng-click="addAnimal()">Animal</button>
+            
+            <ol>
+               <ul ng-repeat="item in sampleArray track by $index">{{item}}</ul>
+                
+           </ol>
+            
+            
+            
         </div>
     
        <div class="tour-wave-step-wrapper">
@@ -62,6 +94,11 @@
                 </div>
                 <div class="cc-wave-effect-shadow cc-wave-effect-shadow-reverse"></div>
                </div></cc-wave>
+           
+           
+           
+           
+           
                   </div>
         
         
