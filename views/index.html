@@ -1,0 +1,80 @@
+<!doctype html>
+
+
+<html>
+    <head>
+        <link rel="stylesheet" href="/node_modules/bootstrap/dist/css/bootstrap.css">
+    </head>
+    <body ng-app="app">
+    
+    <h1 class="jumbotron"> First Angular Apps</h1>
+        
+        
+        outside contoller ->{{random}}
+        
+        <div ng-controller="appCtrl">
+        
+            One way databinding= {{::random}} <br>
+            two way databinding= {{random}} <br>   
+        <button ng-click="submit()">Change </button>
+            
+        
+        <input type="text" ng-model="random">
+        <br>
+            <h1>Form Sample </h1>
+                <table class="table table-striped">
+                    <tr>
+                        <th>First Name</th>
+                        <td>
+                            <input type ="text" ng-model="formModel.firstName"></td>   </tr>
+                    
+                        <tr>
+                           <th> Last Name</th>
+                        <td>
+                            <input type ="text" ng-model="formModel.lastName"></td></tr>
+                    
+                        <tr>
+                            <th> Phone</th>
+                            <td>
+                            <input type ="text" ng-model="formModel.phone"></td></tr>
+                    
+                    
+                    
+                 
+            
+            
+            
+            
+            </table>
+            
+            <button ng-click="sampleSubmit()">Submit</button>
+            
+        </div>
+    
+       <div class="tour-wave-step-wrapper">
+                    <cc-wave class="cc-wave-very-wide ng-isolate-scope"><div class="cc-wave">
+                <div class="cc-wave-cradle">
+                  <div class="cc-wave-svg cc-wave-sidekick"></div>
+                </div>
+                <div class="cc-wave-effect-shadow"></div>
+                <div class="cc-wave-cradle cc-wave-cradle-second">
+                  <div class="cc-wave-svg cc-wave-main" style="color:red"></div>
+                </div>
+                <div class="cc-wave-effect-shadow cc-wave-effect-shadow-reverse"></div>
+               </div></cc-wave>
+                  </div>
+        
+        
+        
+        
+        
+        
+         
+        
+        
+        <script type="text/javascript" src="/angular_project1/node_modules/angular/angular.js"></script>
+        <script type="text/javascript" src="/angular_project1/script/app.js"></script>
+        <script type="text/javascript" src="/angular_project1/script/controllers/appCtrl.js"></script>
+        
+    </body >
+</html>
