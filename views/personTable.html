@@ -1,0 +1,21 @@
+    <table class="table table=hover">
+                
+                
+                
+            <tr>
+                <th>First Name</th>
+                <th>LAst Name</th>
+                <th>phone</th>
+                
+                </tr>
+                
+                <tr ng-repeat="person in personArrayCtrl |filter:search track by $index">
+                    
+                    
+                    <td>{{person.firstName}}</td>
+                    <td>{{person.lastName}}</td>
+                    <td>{{person.phone}}</td>
+                </tr>
+            
+            </table>
+            

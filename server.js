@@ -11,14 +11,14 @@ app.get('/jquery',function(req,res){
     
 });
 
-app.get('/',function(req,res){
+/*app.get('/',function(req,res){
     
     res.send("Hello world");
-});
+});*/
 
 app.get('/',function(req,res){
     
-    res.redirect('/angular_project1/views/index.html');
+    res.redirect('/views/index.html');
 });
 
 

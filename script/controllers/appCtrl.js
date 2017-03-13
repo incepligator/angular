@@ -2,13 +2,24 @@
 
 angular.module("app").controller("appCtrl",
                                  
-                                 ["$scope",function($scope) {
+                                 ["$scope","person","personFactory", function($scope,person,personFactory) {
+                                     
+                                     
+                                     
+                                      personFactory.setFirstName("test1");
+                                personFactory.setLastName("test2  ");     
+                                 personFactory.setPhone("123");    
+                                  personFactory.test(); 
+                                     
+                                     
+                                     
                                      
                                     $scope.random="Hello Shrawan";
                              //       $scope.firstName="Tonald   ";
                              //       $scope.lastName="Kyamu";
                                      
-                                     
+                                  //   alert(person.test);
+                                  
                                      
                                      $scope.submit=function()
                                      {
@@ -18,14 +29,13 @@ angular.module("app").controller("appCtrl",
                                      
                                      
                                      
-                                    $scope.formModel={
-                                        
-                                         "firstName":"John",
-                                         "lastName":"Shrestha",
-                                         "phone":"421385",
-                                     }
+                                     
+                                    $scope.formModel=person.personModel;
                           
                                     
+                                
+                            
+                                     
                         $scope.sampleArray=["cat","dog","bat"];           
                           
                          $scope.addAnimal=function(){
@@ -34,7 +44,7 @@ angular.module("app").controller("appCtrl",
                          }            
                                      
                                     
-                                          var person1={
+                 /*                         var person1={
                                "firstName":"Newyork",
                                          "lastName":"Lama",
                                          "phone":"00000000",
@@ -52,37 +62,42 @@ angular.module("app").controller("appCtrl",
                                          "lastName":"Clintion ",
                                          "phone":"7877878787",
                              
-                         }  
+                         }  */
                                 
                                     
-                         $scope.personArray=[];
+                         $scope.personArrayCtrl=person.personArray;
                                      
-                                     $scope.personArray.push(person1);
+                                /*        $scope.personArray.push(person1);
                                       $scope.personArray.push(person2);
-                                      $scope.personArray.push(person3);
+                                      $scope.personArray.push(person3);*/
                                     
-                                    console.log($scope.personArray[0]);
+                                   // console.log($scope.personArray[0]);
                                      
                                     
                                      
                                      
                                      
-                                    $scope.sampleSubmit=function(){
+                                     
+                                  $scope.sampleSubmit=function(){
                                         
                                         event.preventDefault();
-                                        var samplePerson={
+                                      
+                                        person.personModel={
                                             
                                             "firstName":$scope.formModel.firstName,
                                              "lastName":$scope.formModel.lastName,
-                                             "phone":$scope.formModel.phone,
+                                             "phone":$scope.formModel.phone
                                         }
                                         
+                                        person.sampleSubmit();
+                                      
                                         //for empty default value 
-                                        $scope.formModel={};
+                                       /* $scope.formModel={};
                                         
-                                        $scope.personArray.push(samplePerson);
+                                        $scope.personArrayCtrl.push(samplePerson);
                                         console.log($scope.formModel);
-                                        console.log($scope.personArray);
+                                        console.log($scope.personArrayCtrl);
+                                        console.log(person.personArray);*/
                                     }
                                      
                                   }]);

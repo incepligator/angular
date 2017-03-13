@@ -12,59 +12,24 @@
         
         outside contoller ->{{random}}
         
+        
+        <binding></binding>
+        
+        
         <div ng-controller="appCtrl">
-        
-            One way databinding= {{::random}} <br>
-            two way databinding= {{random}} <br>   
-        <button ng-click="submit()">Change </button>
+            
             
         
-        <input type="text" ng-model="random">
-        <br>
-            <h1>Form Sample </h1>
-                <table class="table table-striped">
-                    <tr>
-                        <th>First Name</th>
-                        <td>
-                            <input type ="text" ng-model="formModel.firstName"></td>   </tr>
-                    
-                        <tr>
-                           <th> Last Name</th>
-                        <td>
-                            <input type ="text" ng-model="formModel.lastName"></td></tr>
-                    
-                        <tr>
-                            <th> Phone</th>
-                            <td>
-                            <input type ="text" ng-model="formModel.phone"></td></tr>
-                    
-                    
-                    
-                 
+          <div ng-include="'/views/binding.html'"></div>
             
             
+            <binding></binding>
+            
+            <person-form></person-form>
+            <person-table></person-table>
             
             
-            </table>
-            
-            <button ng-click="sampleSubmit()">Submit</button>
-            
-            <table class="table table=hover">
-            <tr>
-                <th>First Name</th>
-                <th>LAst Name</th>
-                <th>phone</th>
-                
-                </tr>
-                
-                <tr ng-repeat="person in personArray track by $index">
-                    <td>{{person.firstName}}</td>
-                    <td>{{person.lastName}}</td>
-                    <td>{{person.phone}}</td>
-                </tr>
-            
-            </table>
-            
+        
             
             
             <br>
@@ -97,21 +62,41 @@
            
            
            
+        
            
            
                   </div>
         
         
+           <div>
+               
+               <h1>  Using Direcives</h1>
+               
+               <!--Using Element-->
+                <person-form> </person-form>
         
+               <!--Using attribute -->
+               <div person-form></div>
+               
+                <!--Using Class-->
+               <span class="person-form"></span>
+               
+        </div>
         
         
         
          
         
         
-        <script type="text/javascript" src="/angular_project1/node_modules/angular/angular.js"></script>
-        <script type="text/javascript" src="/angular_project1/script/app.js"></script>
-        <script type="text/javascript" src="/angular_project1/script/controllers/appCtrl.js"></script>
+        <script type="text/javascript" src="/node_modules/angular/angular.js"></script>
+        <script type="text/javascript" src="/script/app.js"></script>
+        
+        <script type="text/javascript" src="/script/controllers/appCtrl.js"></script>
+         <script type="text/javascript" src="/script/services/person.js"></script>
+        <script type="text/javascript" src="/script/services/personFactory.js"></script>
+        <script type="text/javascript" src="/script/directives/personFormt.js"></script>
+        <script type="text/javascript" src="/script/directives/binding.js"></script>
+        <script type="text/javascript" src="/script/directives/personTable.js"></script>
         
     </body >
 </html>

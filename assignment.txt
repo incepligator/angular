@@ -1,0 +1,3 @@
+create form useing factory and appctrl 2
+
+create form and use appctrl 
