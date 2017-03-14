@@ -6,7 +6,7 @@ angular.module("app").controller("appCtrl",
                                      
                                      
                                      
-                                      personFactory.setFirstName("test1");
+                             personFactory.setFirstName("test1");
                                 personFactory.setLastName("test2  ");     
                                  personFactory.setPhone("123");    
                                   personFactory.test(); 
@@ -15,6 +15,8 @@ angular.module("app").controller("appCtrl",
                                      
                                      
                                     $scope.random="Hello Shrawan";
+                                     
+                                     $scope.water="hello waters";
                              //       $scope.firstName="Tonald   ";
                              //       $scope.lastName="Kyamu";
                                      

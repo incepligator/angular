@@ -1,0 +1,11 @@
+     <br>
+            <h1>ng-repeat sample</h1>
+            
+            
+            <input type="text" ng-model="animal">
+            <button ng-click="addAnimal()">Animal</button>
+            
+            <ol>
+               <ul ng-repeat="item in sampleArray track by $index">{{item}}</ul>
+                
+           </ol>

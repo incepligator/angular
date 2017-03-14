@@ -13,64 +13,34 @@
         outside contoller ->{{random}}
         
         
-        <binding></binding>
+       
         
         
         <div ng-controller="appCtrl">
             
             
-        
-          <div ng-include="'/views/binding.html'"></div>
+        <!--  <div ng-include="'/views/binding.html'"></div> -->
             
             
-            <binding></binding>
+                <binding></binding>
             
-            <person-form></person-form>
-            <person-table></person-table>
+                <person-form></person-form>
             
-            
-        
-            
-            
-            <br>
-            <h1>ng-repeat sample</h1>
-            
-            
-            <input type="text" ng-model="animal">
-            <button ng-click="addAnimal()">Animal</button>
-            
-            <ol>
-               <ul ng-repeat="item in sampleArray track by $index">{{item}}</ul>
-                
-           </ol>
-            
-            
+                <person-table></person-table>
             
         </div>
     
-       <div class="tour-wave-step-wrapper">
-                    <cc-wave class="cc-wave-very-wide ng-isolate-scope"><div class="cc-wave">
-                <div class="cc-wave-cradle">
-                  <div class="cc-wave-svg cc-wave-sidekick"></div>
-                </div>
-                <div class="cc-wave-effect-shadow"></div>
-                <div class="cc-wave-cradle cc-wave-cradle-second">
-                  <div class="cc-wave-svg cc-wave-main" style="color:red"></div>
-                </div>
-                <div class="cc-wave-effect-shadow cc-wave-effect-shadow-reverse"></div>
-               </div></cc-wave>
-           
-           
-           
+                <repeat></repeat>
         
-           
-           
-                  </div>
+                <repeatForm></repeatForm>
+        
+        
+        
         
         
            <div>
                
-               <h1>  Using Direcives</h1>
+               <h1>  Using Directives</h1>
                
                <!--Using Element-->
                 <person-form> </person-form>
@@ -90,13 +60,14 @@
         
         <script type="text/javascript" src="/node_modules/angular/angular.js"></script>
         <script type="text/javascript" src="/script/app.js"></script>
-        
         <script type="text/javascript" src="/script/controllers/appCtrl.js"></script>
          <script type="text/javascript" src="/script/services/person.js"></script>
         <script type="text/javascript" src="/script/services/personFactory.js"></script>
         <script type="text/javascript" src="/script/directives/personFormt.js"></script>
         <script type="text/javascript" src="/script/directives/binding.js"></script>
         <script type="text/javascript" src="/script/directives/personTable.js"></script>
+        <script type="text/javascript" src="/script/directives/repeat.js"></script>
+        <script type="text/javascript" src="/script/directives/repeatForm.js"></script>
         
     </body >
 </html>
